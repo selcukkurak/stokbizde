@@ -130,7 +130,8 @@ public class StokbizdeApp extends JFrame {
                 // System look and feel kullan
                 UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             } catch (Exception e) {
-                e.printStackTrace();
+                // Look and feel yüklenemezse varsayılan ile devam et
+                System.err.println("Uyarı: Sistem görünümü yüklenemedi. Varsayılan görünüm kullanılacak.");
             }
 
             StokbizdeApp app = new StokbizdeApp();
